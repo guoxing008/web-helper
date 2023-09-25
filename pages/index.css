@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.banner-text,.banner-text-en {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.banner-text-en {
+  font-size: 30px;
+}
+.banner-text::before,
+.banner-text-en::before {
+  position: absolute;
+  content: '让每一个答案都有价值';
+  color: #ccc;
+  z-index: -1;
+  filter: blur(1px);
+  transform: translate(-19px, 8px) scaleY(0.5) skew(50deg);
+  -webkit-mask-image: linear-gradient(transparent, #ccc)
+}
+
+.banner-text-en::before {
+  content: 'Make every answer valuable';
+  transform: translate(-14px, 5px) scaleY(0.5) skew(50deg);
+}
