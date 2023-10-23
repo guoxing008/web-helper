@@ -66,12 +66,28 @@ const ClassNav = ({active, setIndex}) => {
     </div>
 }
 
-export const Head = ({ active, setIndex }) => {
-  return <div className="flex justify-between p-[24px] bg-[#0d0d0d]">
-    <p className="text-[#fff]">logo</p>
-    <ClassNav active={active} setIndex={setIndex} />
-  </div>
-}
+export const Head = ({ active, setIndex }) => <div className="p-[10px] flex justify-between items-center bg-[#0d0d0d]">
+  <p
+    className="text-[#fff] h-[50px] w-[50px] overflow-hidden relative"
+    >
+    <Image
+      alt="about"
+      src="/static/logo3.png"
+      style={{
+        width: '150px',
+        height: '100px',
+        maxWidth: '150px',
+        maxHeight: '100px',
+        position: 'absolute',
+        left: '-50px',
+        top: '-25px',
+      }}
+      width={150}
+      height={100}/>
+    {/* logo */}
+  </p>
+  <ClassNav active={active} setIndex={setIndex} />
+</div>
 
 const Children = ({setIndex,active}) => {
   const {width, height} = useSize();
